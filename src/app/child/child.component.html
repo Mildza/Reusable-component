@@ -1,0 +1,9 @@
+<ng-template #defaultHeader>
+  <div class="header">
+    <h1>DEFAULT HEADER</h1>
+  </div>
+</ng-template>
+
+<ng-container *ngTemplateOutlet="customHeader ? customHeader : defaultHeader"> </ng-container>
+
+<ng-content select=".section"></ng-content>

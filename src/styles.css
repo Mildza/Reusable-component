@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+accordion-header {
+  cursor: pointer;
+}
+
+.accordion-open {
+  color: brown;
+}
+
+.card {
+  border-radius: none;
+}
+.card-body {
+  background-color: chocolate;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  color: white;
+}
+
+.card-header {
+  background-color: rgba(160, 155, 155, 0.03);
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  margin-bottom: -1px;
+}

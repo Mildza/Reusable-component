@@ -1,0 +1,60 @@
+.container {
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.section {
+  width: 100%;
+  padding: 20px 0;
+  background-color: darksalmon;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.template {
+  padding: 20px 0;
+  width: 100%;
+  background-color: chocolate;
+}
+img {
+  width: 100px;
+}
+
+p {
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+}
+.left {
+  position: absolute;
+  left: 20px;
+}
+.right {
+  position: absolute;
+  right: 20px;
+}
+.down-left {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+.down-right {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.jumbotron {
+  padding: 20px 60px;
+}

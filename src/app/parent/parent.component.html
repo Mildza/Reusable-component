@@ -1,0 +1,57 @@
+<div class="left"><ng-container *ngTemplateOutlet="logo"></ng-container></div>
+<div class="right"><ng-container *ngTemplateOutlet="logo"></ng-container></div>
+
+<div class="container">
+  <button class="btn btn-primary" (click)="custom = !custom">Change Child Header</button>
+  <app-child [customHeader]="custom ? header : null">
+    <div class="section">
+      <p>If we want to pass more data from parent to child we need content projection.</p>
+      <p>With content projection we can build reusable components.</p>
+      <p>We use ng-content to project html into child components.</p>
+      <p>When we use multi slot projection we use select atribute.</p>
+    </div>
+  </app-child>
+
+  <ng-container *ngTemplateOutlet="templateRef; context: exampleContext"></ng-container>
+  <ng-template #templateRef let-default let-other="aContextPropertys">
+    <div class="template">
+      <p>ng-template is an Angular directive for rendering HTML, it is never displayed directly.</p>
+      <p>{{ default }}</p>
+      <p>{{ other }}</p>
+    </div>
+  </ng-template>
+</div>
+
+<div class="container">
+  <accordion class="accordion">
+    <accordion-group *ngFor="let section of data" class="card">
+      <accordion-header class="card-header">
+        {{ section.title }}
+      </accordion-header>
+      <accordion-content>
+        <ng-template accordionContentLazy>
+          <div class="card-body">
+            {{ section.description }}
+          </div>
+        </ng-template>
+      </accordion-content>
+    </accordion-group>
+  </accordion>
+</div>
+
+<div class="down-left"><ng-container *ngTemplateOutlet="logo"></ng-container></div>
+<div class="down-right"><ng-container *ngTemplateOutlet="logo"></ng-container></div>
+
+<!--          templates           -->
+
+<ng-template #header>
+  <div class="header jumbotron">
+    <h1>HEADER</h1>
+  </div>
+</ng-template>
+
+<ng-template #logo>
+  <div>
+    <img src="../assets/copy.png" alt="" />
+  </div>
+</ng-template>
